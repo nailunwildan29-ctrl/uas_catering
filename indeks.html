@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleraku Catering | Cita Rasa Premium</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-orange: #e67e22;
+            --gold-accent: #f1c40f;
+            --dark-brown: #2c3e50;
+            --soft-cream: #fdfaf5;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--soft-cream);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, .navbar-brand {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .navbar {
+            background: rgba(255,255,255,.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand {
+            color: var(--primary-orange) !important;
+            font-weight: 900;
+        }
+
+        .hero-section {
+            height: 90vh;
+            background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+                        url('https://images.unsplash.com/photo-1547573854-74d2a71d0826?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+            border-bottom: 8px solid var(--gold-accent);
+        }
+
+        .btn-order {
+            background: var(--primary-orange);
+            color: white;
+            border-radius: 50px;
+            padding: 12px 35px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-order:hover {
+            background: var(--dark-brown);
+            color: white;
+        }
+
+        .card-menu {
+            border: none;
+            border-radius: 25px;
+            overflow: hidden;
+            transition: .4s;
+            background: white;
+            height: 100%;
+        }
+
+        .card-menu:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0,0,0,.15);
+        }
+
+        .card-menu img {
+            height: 230px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .badge-price {
+            background: linear-gradient(45deg, var(--primary-orange), var(--gold-accent));
+            padding: 8px 20px;
+            border-radius: 50px;
+            color: white;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 5px;
+            background: var(--gold-accent);
+            display: block;
+            margin: 15px auto;
+            border-radius: 10px;
+        }
+
+        .contact-box {
+            background: white;
+            border-radius: 30px;
+            border-left: 10px solid var(--gold-accent);
+            box-shadow: 0 20px 50px rgba(0,0,0,.05);
+            
+        }
+
+        .profile-list li {
+            margin-bottom: 15px;
+            padding-left: 35px;
+            position: relative;
+        }
+
+        .profile-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-orange);
+            font-weight: bold;
+            background: #fff3e0;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fs-2" href="#">🍽️ SELERAKU</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#aboutus">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#whyus">Why Us</a></li>
+                <li class="nav-item ms-lg-3">
+                    <a href="#contact" class="btn-order btn-sm">Pesan Sekarang</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-section text-center" id="home">
+    <div class="container" data-aos="zoom-out">
+        <h1 class="display-1 fw-bold">Kelezatan Tanpa Batas</h1>
+        <p class="fs-4 opacity-75">Catering Premium dengan Sentuhan Kasih Sayang</p>
+        <a href="#menu" class="btn-order btn-lg mt-4 shadow">Lihat Menu Favorit</a>
+    </div>
+</section>
+<section class="py-5 bg-white" id="aboutus">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title fw-bold">About Us</h2>
+            <p class="text-muted">Mengenal lebih dekat Seleraku Catering</p>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=900&q=80"
+                     class="img-fluid rounded-4 shadow">
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+                <h3 class="fw-bold mb-3" style="color:#e67e22">Seleraku Catering</h3>
+                <p class="text-muted">
+                    Seleraku Catering hadir untuk memberikan pengalaman kuliner terbaik
+                    bagi setiap momen spesial Anda. Kami melayani berbagai kebutuhan acara
+                    mulai dari hajatan, kantor, syukuran, hingga event besar.
+                </p>
+                <p class="text-muted">
+                    Dengan perpaduan resep tradisional dan standar penyajian modern,
+                    kami memastikan setiap hidangan tidak hanya lezat,
+                    tetapi juga higienis dan berkelas.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white" id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4" data-aos="fade-right">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=900&q=80"
+                         class="img-fluid rounded-4 shadow-lg">
+                    <div class="bg-white p-3 shadow rounded-3 position-absolute bottom-0 end-0 m-3 d-none d-md-block">
+                        <h4 class="text-orange fw-bold mb-0">8+ Tahun</h4>
+                        <small class="text-muted">Melayani sepenuh hati</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+                <h2 class="fw-bold display-6 mb-4">Profil <span style="color:#e67e22">Seleraku Catering</span></h2>
+                <p class="text-muted lead">
+                    Berawal dari dapur keluarga di tahun 2018, Seleraku telah bertransformasi menjadi mitra catering terpercaya di Indonesia. Kami percaya bahwa makanan yang baik adalah kunci suksesnya sebuah acara.
+                </p>
+                <p class="text-muted">
+                    Visi kami adalah menghadirkan hidangan Nusantara berkualitas hotel bintang lima dengan harga yang tetap terjangkau bagi semua kalangan.
+                </p>
+                <ul class="profile-list">
+                    <li><strong>Bahan Organik:</strong> Kami bekerja sama dengan petani lokal untuk memastikan bahan baku selalu segar setiap pagi.</li>
+                    <li><strong>Sertifikasi Halal:</strong> Seluruh proses pengolahan kami mengikuti standar kebersihan dan syariat.</li>
+                    <li><strong>Custom Menu:</strong> makanan khas indonesia.</li>
+                    <li><strong>Tim Ahli:</strong> Didukung oleh Chef bersertifikasi internasional dan kru lapangan yang sigap.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" id="whyus">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title fw-bold">Why Choose Us</h2>
+            <p class="text-muted">Alasan pelanggan mempercayakan acara mereka kepada kami</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="zoom-in">
+                <div class="card card-menu text-center p-4">
+                    <h1>🍽️</h1>
+                    <h5 class="fw-bold mt-3">Rasa Terjamin</h5>
+                    <p class="text-muted small">
+                        Menggunakan resep turun-temurun dan bahan segar pilihan setiap hari.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card card-menu text-center p-4">
+                    <h1>⏱️</h1>
+                    <h5 class="fw-bold mt-3">Tepat Waktu</h5>
+                    <p class="text-muted small">
+                        Pengiriman cepat dan terjadwal rapi sesuai kebutuhan acara Anda.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card card-menu text-center p-4">
+                    <h1>⭐</h1>
+                    <h5 class="fw-bold mt-3">Pelayanan Profesional</h5>
+                    <p class="text-muted small">
+                        Tim berpengalaman, ramah, dan siap membantu dari awal hingga akhir acara.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-in">
+                <div class="card card-menu text-center p-4">
+                    <h1>🥗</h1>
+                    <h5 class="fw-bold mt-3">Menu Variatif</h5>
+                    <p class="text-muted small">
+                        Tersedia menu Nusantara lengkap dan bisa custom sesuai permintaan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card card-menu text-center p-4">
+                    <h1>🕌</h1>
+                    <h5 class="fw-bold mt-3">Halal & Higienis</h5>
+                    <p class="text-muted small">
+                        Proses masak sesuai standar kebersihan dan kehalalan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card card-menu text-center p-4">
+                    <h1>💰</h1>
+                    <h5 class="fw-bold mt-3">Harga Bersahabat</h5>
+                    <p class="text-muted small">
+                        Kualitas premium dengan harga yang tetap terjangkau.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" id="menu">
+    <div class="container text-center">
+        <h2 class="section-title fw-bold">Pilihan Menu Spesial</h2>
+        <p class="text-muted mb-5">Manjakan lidah tamu Anda dengan hidangan terbaik kami</p>
+
+        <div class="row g-4 mt-2">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="card card-menu shadow-sm">
+                    <img src="https://umkmtaka.paserkab.go.id/storage/images/product/41/nasi-kotak-rendang/IMG-20221021-WA0006_6351f91280d1a.jpg" alt="Rendang">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Rendang Sapi Khas Minang</h5>
+                        <p class="text-muted small">Nasi Putih, Rendang Daging, Sayur Kapau, Sambal Ijo, Kerupuk.</p>
+                        <p clas="text-muted small" >Daging pilihan dengan bumbu rempah otentik yang meresap sempurna</p>
+                        <div class="badge-price">Rp 45.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card card-menu shadow-sm">
+                    <img src="https://img-global.cpcdn.com/recipes/74f033abc2075548/680x781f0.5_0.5_1.0q80/ayam-serundeng-foto-resep-utama.jpg" alt="Ayam">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Ayam Serundeng Lengkuas Khas Sunda</h5>
+                        <p class="text-muted small">Nasi Putih, Ayam Serundeng, Tahu/Tempe Goreng, Sambal Bajak, Lalapan.</p>
+                        <p class="text-muted small">Ayam goreng gurih dengan taburan kelapa sangrai yang renyah dan harum.</p>
+                        <div class="badge-price">Rp 30.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card card-menu shadow-sm">
+                    <img src="https://img-global.cpcdn.com/recipes/d67290bd9c494ee0/680x781cq80/sate-ayam-box-foto-resep-utama.jpg" alt="Paket">
+                    <div class="card-body">
+                        <h5 class="fw-bold">sate ayam khas Madura</h5>
+                        <p class="text-muted small">Nasi Putih (atau Lontong), 5 Tusuk Sate, Bumbu Kacang, Acar Segar, Kerupuk.</p>
+                        <p class="text-muted small">Sate bakar aroma smoky dengan siraman saus kacang kental yang krispi.</p>
+                        <div class="badge-price">Rp 25.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="card card-menu shadow-sm">
+                    <img src="https://pabriknasiboxsolo.com/wp-content/uploads/2024/05/Nasi-Gudeg-Telur.jpg" alt="Nasi Goreng">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Nasi gudeg khas Jogja</h5>
+                        <p class="text-muted small">Nasi Putih, Gudeg, Krecek Pedas, Telur Pindang, Sambal Goreng.</p>
+                        <p class="text-muted small">Perpaduan manis-gurih nangka muda khas Jogja yang dimasak perlahan</p>
+                        <div class="badge-price">Rp 35.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card card-menu shadow-sm">
+                    <img src="https://i.pinimg.com/736x/64/32/33/64323304902581831342e99a436e048b.jpg" alt="Sate">
+                    <div class="card-body">
+                        <h5 class="fw-bold">ayam bakar taliwang khas lombok</h5>
+                        <p class="text-muted small">Nasi Putih, Ayam Bakar, Urap Sayur/Tumisan, Sambal Korek, Kerupuk.</p>
+                        <p class="text-muted small">Ayam bakar bumbu meresap dengan aroma panggangan yang menggugah selera.</p>
+                        <div class="badge-price">Rp 35.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card card-menu shadow-sm">
+                    <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/bae24e51-eb56-4cdb-827d-d87388c84bc7_Go-Biz_20210727_131036.jpeg" alt="Sehat">
+                    <div class="card-body">
+                        <h5 class="fw-bold">lele goreng terbang Khas lamongan</h5>
+                        <p class="text-muted small">Nasi Putih, Lele Goreng, Kremesan, Sambal Terasi, Lalapan Segar.</p>
+                        <p class="text-muted small">Lele garing keemasan yang krispi di luar namun tetap lembut di dalam.</p>
+                        <div class="badge-price">Rp 20.000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" id="contact">
+    <div class="container">
+        <div class="contact-box p-5 text-center" data-aos="flip-left">
+            <h2 class="fw-bold mb-3">Konsultasikan Acara Anda</h2>
+            <p class="text-muted mb-4">Nomor wa : 085718180298</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="#" class="btn-order shadow-sm">💬 WhatsApp Kami</a>
+                <a href="#" class="btn btn-outline-dark px-4 py-2 rounded-5">📧 Kirim Email</a>
+            </div>
+            <p class="mt-4 fw-bold">📍 Jl. Kuliner No. 123, Jakarta Selatan</p>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+        <p class="mb-1 fw-bold">🍽️ SELERAKU CATERING</p>
+        <small class="opacity-50">&copy; 2026 Seleraku Catering. All Rights Reserved.</small>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ 
+        once: true,
+        duration: 800
+    });
+</script>
+
+</body>
+</html>
